@@ -1,0 +1,48 @@
+{
+  "name": "go-result-js",
+  "version": "0.0.1",
+  "description": "go-like results",
+  "types": "lib/index.d.ts",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [
+    "go",
+    "result",
+    "return",
+    "functions",
+    "go-like",
+    "rust",
+    "rust-like"
+  ],
+  "author": "morglod",
+  "license": "MIT",
+  "peerDependencies": {
+    "aws-amplify": "^0.4.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.1.2",
+    "jest": "^23.2.0",
+    "ts-jest": "^22.4.6",
+    "typescript": "^2.9.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/__tests__/*.+(ts|tsx|js)"
+    ]
+  }
+}
