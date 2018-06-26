@@ -3,7 +3,15 @@
 
 # go-result-js
 
-Go-like results
+Go-like results:
+
+```js
+const [ err, result ] = foo();
+```
+
+* Zero dependencies
+* Full typescript support
+* 100% test coverage
 
 ## Usage
 
