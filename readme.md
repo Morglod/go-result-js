@@ -1,4 +1,4 @@
-[![codecov.io Code Coverage](https://img.shields.io/codecov/c/github/Morglod/go-result-js.svg?maxAge=2592000)](https://codecov.io/github/Morglod/go-result-js?branch=master)
+![codecov.io Code Coverage](https://img.shields.io/codecov/c/github/Morglod/go-result-js.svg?maxAge=2592000)
 
 # go-result-js
 
