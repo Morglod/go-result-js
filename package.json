@@ -5,7 +5,9 @@
   "types": "lib/index.d.ts",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "compile": "tsc",
+    "prepublish": "npm run compile & npm run test"
   },
   "keywords": [
     "go",
@@ -18,8 +20,9 @@
   ],
   "author": "morglod",
   "license": "MIT",
-  "peerDependencies": {
-    "aws-amplify": "^0.4.6"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Morglod/go-result-js.git"
   },
   "devDependencies": {
     "@types/jest": "^23.1.2",
@@ -38,7 +41,7 @@
     },
     "globals": {
       "ts-jest": {
-        "tsConfigFile": "tsconfig.json"
+        "tsConfigFile": "tsconfig.jest.json"
       }
     },
     "testMatch": [
