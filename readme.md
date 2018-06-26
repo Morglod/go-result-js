@@ -27,10 +27,10 @@ Import:
 import { Result, ResultErr, ResultOk } from 'go-result-js';
 ```
 
-Or use it globally:
-
+Or use it globally:  
+(write in main file, before everythink)
 ```ts
-import 'go-result-js/global';
+import 'go-result-js/lib/global';
 ```
 
 ## Example
