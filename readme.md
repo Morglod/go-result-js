@@ -1,5 +1,5 @@
 [![NPM Version](https://badge.fury.io/js/go-result-js.svg?style=flat)](https://www.npmjs.com/package/go-result-js)
-![Coverage](https://img.shields.io/codecov/c/github/Morglod/go-result-js.svg)
+[![Coverage](https://img.shields.io/codecov/c/github/Morglod/go-result-js.svg)](https://codecov.io/gh/Morglod/go-result-js)
 
 # go-result-js
 
