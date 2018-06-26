@@ -1,3 +1,4 @@
+![NPM Version](https://badge.fury.io/js/go-result-js.svg?style=flat)
 ![Coverage](https://img.shields.io/codecov/c/github/Morglod/go-result-js.svg)
 
 # go-result-js
