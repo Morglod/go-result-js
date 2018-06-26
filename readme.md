@@ -27,10 +27,10 @@ Import:
 import { Result, ResultErr, ResultOk } from 'go-result-js';
 ```
 
-Or use it globally in js:
+Or use it globally:
 
-```js
-require('go-result-js').registerGlobally();
+```ts
+import 'go-result-js/global';
 ```
 
 ## Example
