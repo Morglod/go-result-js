@@ -24,7 +24,7 @@ npm i go-result-js
 Import:
 
 ```ts
-import { Result, ResultErr, ResultOk } from 'go-result-js';
+import { ResultA, ResultErr, ResultOk } from 'go-result-js';
 ```
 
 Or use it globally:  
@@ -95,7 +95,8 @@ export type ResultA<T, ErrorT extends Error = Error> = Promise<Result<T, ErrorT>
 function registerGlobally(global?: any): Result<boolean>
 ```
 
-Assign all methods to `global` object.
+Assign all methods to `global` object.  
+`go-result-js/lib/global` calls it.
 
 ```ts
 function ResultOk<T>(value: T): Result<T>
