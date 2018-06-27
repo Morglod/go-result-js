@@ -68,7 +68,6 @@ async function asyncMain() {
 
 ```ts
 import { Auth } from 'aws-amplify';
-import { ResultA } from './index';
 
 export async function main() {
     const [ err, user ] = await ResultA(Auth.signIn('root', 'password'));
