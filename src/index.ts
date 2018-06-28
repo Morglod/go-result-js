@@ -5,7 +5,7 @@ export type ResultA<T, ErrorT extends Error = Error> = Promise<Result<T, ErrorT>
 export function ResultA<T = any, ErrorT extends Error = Error>(
     x: Promise<T> | ((
         resolve: (value: undefined|T|Error) => void,
-        reject: (err?: ErrorT) => void
+        reject: (err?: ResultErr<ErrorT>) => void
     ) => void)
 ): ResultA<T, ErrorT> {
     return new Promise(((resolve: (value: Result<T>) => void) => {
