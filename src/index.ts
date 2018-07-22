@@ -27,15 +27,16 @@ export function ResultA<T = any, ErrorT extends Error = Error>(
     }) as any);
 }
 
-export function ResultOk<T = any>(value: T): Result<T> {
+export function ResultOk<T = any>(value: T): Result<T, any> {
     return [ undefined, value ];
 }
 
-export function ResultErr<T = any, ErrorT extends Error = Error>(err: ErrorT|true|string = true): Result<T, ErrorT> {
+export function ResultErr<ErrorT extends Error = Error, T = any>(err: ErrorT|true|string = true): Result<T, ErrorT> {
     if (typeof err === 'string') err = new Error(err) as ErrorT;
     return [ err, undefined ];
 }
 
+/** import lib/global instead */
 export function registerGlobally(global?: any): Result<boolean> {
     if (!global) global = eval('(window || global)');
     if (!global) return ResultErr(new Error('No global object'));
