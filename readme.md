@@ -104,7 +104,7 @@ function ResultOk<T>(value: T): Result<T>
 Returns `value` with undefined error.
 
 ```ts
-function ResultErr<T, ErrorT extends Error>(err: ErrorT|true|string = true): Result<T, ErrorT>
+function ResultErr<ErrorT extends Error, T=any>(err: ErrorT|true|string = true): Result<T, ErrorT>
 ```
 
 Returns `error` with undefined value.
