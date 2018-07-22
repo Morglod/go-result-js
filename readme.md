@@ -33,6 +33,23 @@ Or use it globally:
 import 'go-result-js/lib/global';
 ```
 
+## Example with exceptions
+
+Before:
+```ts
+const result = await doSmthWithException();
+// (node:17320) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 2): Error: Request failed with status code 400
+// (node:17320) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+```
+
+After:
+```ts
+const [ err, result ] = await ResultA(doSmthWithException());
+if (err || !result) {
+    // exception handled!
+}
+```
+
 ## Example
 
 ```ts
