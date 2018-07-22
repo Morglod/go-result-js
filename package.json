@@ -1,6 +1,6 @@
 {
   "name": "go-result-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "go-like results",
   "types": "lib/index.d.ts",
   "main": "lib/index.js",
@@ -16,7 +16,9 @@
     "functions",
     "go-like",
     "rust",
-    "rust-like"
+    "rust-like",
+    "tuple",
+    "set"
   ],
   "author": "morglod",
   "license": "MIT",
