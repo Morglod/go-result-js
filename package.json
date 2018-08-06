@@ -1,6 +1,6 @@
 {
   "name": "go-result-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "go-like results",
   "types": "lib/index.d.ts",
   "main": "lib/index.js",
@@ -33,6 +33,7 @@
     "typescript": "^2.9.2"
   },
   "jest": {
+    "testURL": "http://localhost",
     "moduleFileExtensions": [
       "ts",
       "tsx",
