@@ -91,6 +91,28 @@ export async function main() {
 }
 ```
 
+## Multiple results
+
+Handle multiple `ResultA` results, and catch any errors.
+
+```ts
+const { err, values } = await resultAll(
+    Content.fetchById(contentType, id),
+    Rubrics.fetchRubrics(),
+    ContentTypes.fetchContentTypes(),
+);
+
+if (err) {
+    // on any error
+}
+
+const {
+    0: content,
+    1: rubrics,
+    2: contentTypes,
+} = values;
+```
+
 ## API
 
 <details>
@@ -136,5 +158,20 @@ function ResultA<T, ErrorT extends Error>(
 ```
 
 Takes `Promise's callbacks` or `Promise`, catch it's error and resolve as `Promise<Result>`.
+
+
+```ts
+function resultAll<Results extends ResultA<any>[]>(
+    ...results: Results
+): Promise<{
+    err: ResultErr | undefined,
+    values: {
+        [i in keyof Results]: PickSecondItem<PromiseType<Results[i]>, undefined>
+    },
+    results: {
+        [i in keyof Results]: PromiseType<Results[i]>
+    }
+}>
+```
 
 </details>

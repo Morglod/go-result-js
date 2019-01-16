@@ -47,3 +47,27 @@ export function registerGlobally(global?: any): Result<boolean> {
         return ResultOk(true);
     }
 }
+
+export async function resultAll<Results extends ResultA<any>[]>(
+    ...results: Results
+): Promise<{
+    err: ResultErr | undefined,
+    values: {
+        [i in keyof Results]: PickSecondItem<PromiseType<Results[i]>, undefined>
+    },
+    results: {
+        [i in keyof Results]: PromiseType<Results[i]>
+    }
+}> {
+    const r = await Promise.all(results);
+    const anyError = r.find(x => x[0] !== undefined);
+
+    return {
+        err: anyError ? anyError[0] : undefined,
+        values: r.map(x => x[1]) as any,
+        results: r as any,
+    };
+}
+
+type PromiseType<PromiseT> = PromiseT extends Promise<infer T> ? T : never;
+type PickSecondItem<T, Fail = never> = T extends any[] ? T[1]: Fail;
